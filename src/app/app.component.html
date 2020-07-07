@@ -1,1 +1,22 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row class="navBar">
+
+    <!-- <h1>SimpleCRM</h1>
+    <span class="menu-spacer"></span> -->
+    <div>
+      <a mat-button [routerLink]="'/'"> Home </a>
+      <a mat-button [routerLink]="'/tableDetail'"> Table Detail </a>
+      <a mat-button [routerLink]="'/contacts'"> Contacts </a>
+      <a mat-button [routerLink]="'/create-contact'"> Create Contact </a>
+      <a mat-button [routerLink]="'/activities'"> Activities </a>
+      <a mat-button [routerLink]="'/create-activity'"> Create Activity </a>
+
+    </div>
+  </mat-toolbar-row>
+
+  <!-- <mat-toolbar-row>
+      <span style="font-size: 12px;">SimpleCRM helps you easily manage your contacts</span>
+    </mat-toolbar-row> -->
+</mat-toolbar>
+
 <router-outlet></router-outlet>

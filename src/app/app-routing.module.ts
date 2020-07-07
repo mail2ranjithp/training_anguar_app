@@ -7,7 +7,7 @@ const routes: Routes = [{
   path: 'tableDetail',
   component: TableDetailComponent,
 },
-{path: '', redirectTo: 'home', pathMatch: 'full'}];
+{path: '', redirectTo: 'tableDetail', pathMatch: 'full'}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
