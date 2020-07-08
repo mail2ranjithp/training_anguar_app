@@ -10,9 +10,12 @@ const productList = new Products();
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.sass']
 })
-export class DashboardComponent { //implements OnInit {
+export class DashboardComponent implements OnInit {
 
   public filter:string = '';
+  name: string;
+  address : string;
+  dataSource: Array<{name: string, address: string}> = []
   public list:any[] = productList.products;
 
   angForm: FormGroup;
@@ -27,6 +30,15 @@ export class DashboardComponent { //implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  onSubmit() {
+    if(this.angForm.valid){
+      
+      this.dataSource.push({name: this.angForm.value.name, address: this.angForm.value.address });
+      //console.log("form submitted", this.dataSource);
+    }
+    
   }
 
 }
