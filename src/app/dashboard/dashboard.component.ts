@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
 
-import { Products } from '../products';
+import { Products } from './../products';
 
 const productList = new Products();
 
