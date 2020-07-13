@@ -4,7 +4,6 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Bike } from '../bike';
 import { BikeService } from '../bike.service';
-import { switchMap } from 'rxjs/operators';
  
  
 @Component({
