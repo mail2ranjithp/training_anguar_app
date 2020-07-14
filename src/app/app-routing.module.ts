@@ -8,6 +8,11 @@ import { BikesComponent } from './bikes/bikes.component';
 import { BikesInfoComponent } from './bikesinfo/bikesinfo.component';
 
 const routes: Routes = [
+  {
+    path: 'customers',
+    //loadChildren: '/app/customer/customer.module'
+    loadChildren:  () => import('./customer/customer.module').then(m => m.CustomerModule)
+  },
   { path: 'information/:id', component: BikesInfoComponent },
   { path: 'bikes', component: BikesComponent },
   { path: 'tabs', component: TabsComponent },
@@ -18,6 +23,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: []
 })
 export class AppRoutingModule { }

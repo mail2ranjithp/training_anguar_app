@@ -27,6 +27,10 @@ import { BikesInfoComponent } from './bikesinfo/bikesinfo.component';
 
 import { BikeService } from './bike.service';
 
+// import { CustomerComponent } from './customer/customer.component';
+// import { CustomerDetailComponent } from './customer/customer-detail/customer-detail.component';
+// import { CustomerListComponent } from './customer/customer-list/customer-list.component';
+
 
 @NgModule({
   declarations: [
@@ -37,6 +41,9 @@ import { BikeService } from './bike.service';
     TabsComponent,
     BikesComponent,
     BikesInfoComponent
+    // CustomerComponent,
+    // CustomerDetailComponent,
+    // CustomerListComponent
   ],
   imports: [
     BrowserModule,
