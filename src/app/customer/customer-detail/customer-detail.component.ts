@@ -16,7 +16,7 @@ export class CustomerDetailComponent implements OnInit{
     });
   }
   getCustomer(id){
-    this.customerRecord = this.customerList.filter(x=>x.id == id)[0];  
+    this.customerRecord = this.customerList.filter(x=>x.id == id);  
   }  
 
   customerList:Array<any> = [
