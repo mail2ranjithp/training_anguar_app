@@ -26,6 +26,8 @@ import { BikesComponent } from './bikes/bikes.component';
 import { BikesInfoComponent } from './bikesinfo/bikesinfo.component';
 
 import { BikeService } from './bike.service';
+import { ParentComponent } from './communication/parent/parent.component';
+import { ChildComponent } from './communication/child/child.component';
 
 // import { CustomerComponent } from './customer/customer.component';
 // import { CustomerDetailComponent } from './customer/customer-detail/customer-detail.component';
@@ -40,7 +42,9 @@ import { BikeService } from './bike.service';
     SktFilterPipe,
     TabsComponent,
     BikesComponent,
-    BikesInfoComponent
+    BikesInfoComponent,
+    ParentComponent,
+    ChildComponent
     // CustomerComponent,
     // CustomerDetailComponent,
     // CustomerListComponent

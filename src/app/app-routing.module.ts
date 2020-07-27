@@ -7,12 +7,16 @@ import { TabsComponent } from './tabs/tabs.component';
 import { BikesComponent } from './bikes/bikes.component';
 import { BikesInfoComponent } from './bikesinfo/bikesinfo.component';
 
+import { ParentComponent } from './communication/parent/parent.component';
+import { ChildComponent } from './communication/child/child.component';
+
 const routes: Routes = [
   {
     path: 'customers',
     //loadChildren: '/app/customer/customer.module'
     loadChildren:  () => import('./customer/customer.module').then(m => m.CustomerModule)
   },
+  { path: 'communication', component: ParentComponent },
   { path: 'information/:id', component: BikesInfoComponent },
   { path: 'bikes', component: BikesComponent },
   { path: 'tabs', component: TabsComponent },
