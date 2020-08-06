@@ -9,6 +9,7 @@ import { BikesInfoComponent } from './bikesinfo/bikesinfo.component';
 
 import { ParentComponent } from './communication/parent/parent.component';
 import { ChildComponent } from './communication/child/child.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,7 @@ const routes: Routes = [
     //loadChildren: '/app/customer/customer.module'
     loadChildren:  () => import('./customer/customer.module').then(m => m.CustomerModule)
   },
+  { path: 'login', component: LoginComponent },
   { path: 'communication', component: ParentComponent },
   { path: 'information/:id', component: BikesInfoComponent },
   { path: 'bikes', component: BikesComponent },

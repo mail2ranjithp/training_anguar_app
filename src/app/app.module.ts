@@ -28,6 +28,7 @@ import { BikesInfoComponent } from './bikesinfo/bikesinfo.component';
 import { BikeService } from './bike.service';
 import { ParentComponent } from './communication/parent/parent.component';
 import { ChildComponent } from './communication/child/child.component';
+import { LoginComponent } from './login/login.component';
 
 // import { CustomerComponent } from './customer/customer.component';
 // import { CustomerDetailComponent } from './customer/customer-detail/customer-detail.component';
@@ -44,7 +45,8 @@ import { ChildComponent } from './communication/child/child.component';
     BikesComponent,
     BikesInfoComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    LoginComponent
     // CustomerComponent,
     // CustomerDetailComponent,
     // CustomerListComponent
