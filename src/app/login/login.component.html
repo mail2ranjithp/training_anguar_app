@@ -1,6 +1,6 @@
 <div class="loginContainer">
     
-<h2> In Progress... </h2>
+<h2> Login </h2>
 <form [formGroup]="angForm" novalidate (ngSubmit)="onSubmit()">
     <div class="form-group">
         <label>Username :</label>
@@ -14,7 +14,7 @@
 
      <div class="form-group">
         <label>Password :</label>
-        <input class="form-control" formControlName="password" type="text">
+        <input class="form-control" formControlName="password" type="password">
     </div>
     <div *ngIf="angForm.controls['password'].invalid && (angForm.controls['password'].dirty || angForm.controls['password'].touched)" class="alert alert-danger">
         <div *ngIf="angForm.controls['password'].errors.required">
@@ -23,6 +23,9 @@
     </div>
     <button type="submit" [disabled]="angForm.pristine || angForm.invalid" class="btn btn-success">
         Login
+    </button>
+    <button type="submit" [routerLink]="'/register'" class="btn btn-default">
+        Register
     </button>
 </form>
 </div>

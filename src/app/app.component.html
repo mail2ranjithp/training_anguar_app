@@ -3,7 +3,7 @@
 
     <!-- <h1>SimpleCRM</h1>
     <span class="menu-spacer"></span> -->
-    <div>
+    <div *ngIf="loggedIn == 'true'">
       <a mat-button [routerLink]="'/dashboard'"> Dashboard </a>
       <a mat-button [routerLink]="'/customers'"> Customers </a>
       <a mat-button [routerLink]="'/tableDetail'"> Table Detail </a>
@@ -16,7 +16,11 @@
       
 
     </div>
-    <div class="loginHeader"> <a class="loginHeader" mat-button [routerLink]="'/login'"> Login </a></div>
+    <div class="loginHeader"> 
+      <a *ngIf="loggedIn == null" class="loginHeader" mat-button [routerLink]="'/login'"> Login </a>
+      <a *ngIf="loggedIn == null" class="loginHeader" mat-button [routerLink]="'/register'"> Register </a>
+      <a *ngIf="loggedIn == 'true'" class="loginHeader" mat-button (click)="logout()"> Logout </a>
+    </div>
   </mat-toolbar-row>
 
   <!-- <mat-toolbar-row>

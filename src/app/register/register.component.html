@@ -1,0 +1,51 @@
+<div class="loginContainer">
+<h2> Register </h2>
+<form [formGroup]="regForm" novalidate (ngSubmit)="onSubmit()">
+
+    <div class="form-group">
+        <label>Firstname :</label>
+        <input class="form-control" formControlName="firstname" type="text">
+    </div>
+    <div *ngIf="regForm.controls['firstname'].invalid && (regForm.controls['firstname'].dirty || regForm.controls['firstname'].touched)" class="alert alert-danger">
+        <div *ngIf="regForm.controls['firstname'].errors.required">
+            Firstname is required.
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Lastname :</label>
+        <input class="form-control" formControlName="lastname" type="text">
+    </div>
+    <div *ngIf="regForm.controls['lastname'].invalid && (regForm.controls['lastname'].dirty || regForm.controls['lastname'].touched)" class="alert alert-danger">
+        <div *ngIf="regForm.controls['lastname'].errors.required">
+            Lastname is required.
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label>Username :</label>
+        <input class="form-control" formControlName="username" type="text">
+    </div>
+    <div *ngIf="regForm.controls['username'].invalid && (regForm.controls['username'].dirty || regForm.controls['username'].touched)" class="alert alert-danger">
+        <div *ngIf="regForm.controls['username'].errors.required">
+            Username is required.
+        </div>
+    </div>
+
+     <div class="form-group">
+        <label>Password :</label>
+        <input class="form-control" formControlName="password" type="password">
+    </div>
+    <div *ngIf="regForm.controls['password'].invalid && (regForm.controls['password'].dirty || regForm.controls['password'].touched)" class="alert alert-danger">
+        <div *ngIf="regForm.controls['password'].errors.required">
+            Password is required.
+        </div>
+    </div>
+    <button type="submit" [disabled]="regForm.pristine || regForm.invalid" class="btn btn-success">
+        Register
+    </button>
+    <button type="submit" [routerLink]="'/login'" class="btn btn-default">
+        Cancel
+    </button>
+</form>
+</div>
