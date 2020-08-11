@@ -42,6 +42,7 @@ export class LoginComponent {
 
       if(this.sessionUsername == this.angForm.value.username && this.sessionPassword == this.angForm.value.password){
         this.router.navigate(['/dashboard']);
+        sessionStorage.setItem("loggedIn", "true");
         this.loggedInCheck.emit(sessionStorage.getItem("loggedIn"));
       } else {
         alert("Login Failed");

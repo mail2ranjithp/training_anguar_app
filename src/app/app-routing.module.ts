@@ -26,7 +26,7 @@ const routes: Routes = [
   { path: 'tabs', component: TabsComponent },
   { path: 'tableDetail', component: TableDetailComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' }
+  { path: '', redirectTo: '/register', pathMatch: 'full' }
 ];
 
 @NgModule({
