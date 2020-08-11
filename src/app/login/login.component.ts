@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormGroup,  FormBuilder,  Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.sass']
 })
 export class LoginComponent {
+  @Output() loggedInCheck: EventEmitter<any> = new EventEmitter();
 
   username: string;
   password : string;
@@ -41,6 +42,7 @@ export class LoginComponent {
 
       if(this.sessionUsername == this.angForm.value.username && this.sessionPassword == this.angForm.value.password){
         this.router.navigate(['/dashboard']);
+        this.loggedInCheck.emit(sessionStorage.getItem("loggedIn"));
       } else {
         alert("Login Failed");
       }

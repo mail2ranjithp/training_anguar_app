@@ -12,7 +12,12 @@ export class AppComponent {
   constructor( private router: Router) {
   }
 
+  onLoginCheck($event) {
+    this.loggedIn = sessionStorage.getItem("loggedIn");
+  }
+    
   loggedIn = sessionStorage.getItem("loggedIn");
+  
 
   logout(){ 
     sessionStorage.clear();
